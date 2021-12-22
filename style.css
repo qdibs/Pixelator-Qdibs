@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5256ad;
+    flex-direction: column;
+  }
+  .heading {
+    margin: 1rem;
+  }
+  .drag-area {
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: background-color 0.3s;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .drag-area.active {
+    border: 2px solid #fff;
+    background-color: #0003;
+  }
+  .drag-area .icon {
+    font-size: 100px;
+  }
+  .drag-area span {
+    font-size: 25px;
+    margin: 10px 0 15px 0;
+  }
+  .btn {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  #pixelate-amount {
+    width: 700px;
+    margin: 1rem;
+  }
+  #download-btn {
+    margin-bottom: 1rem;
+  }
+  .disabled {
+    cursor: not-allowed;
+    background-color: #fff7;
+  }
+  
+  canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
